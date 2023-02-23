@@ -25,6 +25,7 @@ struct ListRowView: View {
             .padding(.vertical, 8)
             .foregroundColor(.white)
         }
+        .preferredColorScheme(.dark)
         .listRowBackground(Color(.systemIndigo))
     }
 }

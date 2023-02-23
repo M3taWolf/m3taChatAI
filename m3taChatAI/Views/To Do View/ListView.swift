@@ -43,6 +43,7 @@ struct ListView: View {
                 }
             }
             .navigationTitle("24H TO DO")
+            .preferredColorScheme(.dark)
             .foregroundColor(.cyan)
         
             
