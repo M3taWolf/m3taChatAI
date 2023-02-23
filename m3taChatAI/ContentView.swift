@@ -6,21 +6,50 @@
 //
 
 import SwiftUI
+import OpenAISwift
 
-struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+    
+    struct ContentView: View {
+        
+        @State var selectedTab = "house.fill"
+        @ObservedObject var viewModel = ViewModel()
+        
+        
+        var body: some View {
+                ZStack {
+                    Color(.systemIndigo)
+                        .ignoresSafeArea()
+                    
+                    VStack{
+                        
+                        if selectedTab == "house.fill" {
+                            Home()
+                        }
+
+                        if selectedTab == "message.fill" {
+                            ChatView()
+                        }
+                        
+                        if selectedTab == "list.bullet" {
+                            ListView()
+                        }
+                        
+                        if selectedTab == "gearshape.fill" {
+                            SettingsView()
+                        }
+                       
+                        Spacer()
+                        CustomTabBar(selectedTab: $selectedTab)
+                        
+                }
+            }
         }
-        .padding()
     }
-}
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+                .environmentObject(ListViewModel())
+        }
+        
+    }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}

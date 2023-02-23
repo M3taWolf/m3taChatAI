@@ -7,18 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D3AD99D29A42C570052E998 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD99C29A42C570052E998 /* SettingsView.swift */; };
+		3D3AD9A029A502920052E998 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD99F29A502920052E998 /* MessageData.swift */; };
+		3D3AD9B729A78B730052E998 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9B629A78B730052E998 /* ListView.swift */; };
+		3D3AD9B929A78B950052E998 /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9B829A78B950052E998 /* ListRowView.swift */; };
+		3D3AD9BB29A78BA40052E998 /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9BA29A78BA40052E998 /* AddView.swift */; };
+		3D3AD9BD29A78BB00052E998 /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9BC29A78BB00052E998 /* NoItemsView.swift */; };
+		3D3AD9BF29A78BD00052E998 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9BE29A78BD00052E998 /* ListViewModel.swift */; };
+		3D3AD9C129A78C550052E998 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9C029A78C550052E998 /* ItemModel.swift */; };
 		3DCD965C29969B1C005F996C /* m3taChatAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD965B29969B1C005F996C /* m3taChatAIApp.swift */; };
 		3DCD965E29969B1C005F996C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD965D29969B1C005F996C /* ContentView.swift */; };
 		3DCD966029969B1D005F996C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DCD965F29969B1D005F996C /* Assets.xcassets */; };
 		3DCD966329969B1D005F996C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DCD966229969B1D005F996C /* Preview Assets.xcassets */; };
+		3DCD966B29969C03005F996C /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3DCD966A29969C03005F996C /* OpenAISwift */; };
+		3DCD966E29969CE1005F996C /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD966D29969CE1005F996C /* ViewModel.swift */; };
+		3DCD96712997163B005F996C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD96702997163B005F996C /* ChatView.swift */; };
+		3DCD967329971B3D005F996C /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD967229971B3D005F996C /* CustomTabBar.swift */; };
+		3DCD967529971B6E005F996C /* TabCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD967429971B6E005F996C /* TabCurve.swift */; };
+		3DCD967729971D3E005F996C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD967629971D3E005F996C /* Home.swift */; };
+		3DCD967929972116005F996C /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD967829972116005F996C /* HeaderView.swift */; };
+		3DCD967B29972167005F996C /* RoundedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD967A29972167005F996C /* RoundedShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D3AD99C29A42C570052E998 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		3D3AD99F29A502920052E998 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		3D3AD9B629A78B730052E998 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		3D3AD9B829A78B950052E998 /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
+		3D3AD9BA29A78BA40052E998 /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
+		3D3AD9BC29A78BB00052E998 /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
+		3D3AD9BE29A78BD00052E998 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		3D3AD9C029A78C550052E998 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		3DCD965829969B1C005F996C /* m3taChatAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m3taChatAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DCD965B29969B1C005F996C /* m3taChatAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3taChatAIApp.swift; sourceTree = "<group>"; };
 		3DCD965D29969B1C005F996C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		3DCD965F29969B1D005F996C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3DCD966229969B1D005F996C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3DCD966D29969CE1005F996C /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		3DCD96702997163B005F996C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		3DCD967229971B3D005F996C /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		3DCD967429971B6E005F996C /* TabCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabCurve.swift; sourceTree = "<group>"; };
+		3DCD967629971D3E005F996C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		3DCD967829972116005F996C /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		3DCD967A29972167005F996C /* RoundedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,12 +57,67 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCD966B29969C03005F996C /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D3AD9A129A5064A0052E998 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3D3AD99F29A502920052E998 /* MessageData.swift */,
+				3D3AD9C029A78C550052E998 /* ItemModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3D3AD9A229A50D300052E998 /* CustomTabView */ = {
+			isa = PBXGroup;
+			children = (
+				3DCD967429971B6E005F996C /* TabCurve.swift */,
+				3DCD967229971B3D005F996C /* CustomTabBar.swift */,
+			);
+			path = CustomTabView;
+			sourceTree = "<group>";
+		};
+		3D3AD9A329A50D4B0052E998 /* ChatView */ = {
+			isa = PBXGroup;
+			children = (
+				3DCD96702997163B005F996C /* ChatView.swift */,
+			);
+			path = ChatView;
+			sourceTree = "<group>";
+		};
+		3D3AD9A429A50D5D0052E998 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				3DCD967829972116005F996C /* HeaderView.swift */,
+				3DCD967629971D3E005F996C /* Home.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		3D3AD9A529A50D700052E998 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				3D3AD99C29A42C570052E998 /* SettingsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		3D3AD9B529A78B640052E998 /* To Do View */ = {
+			isa = PBXGroup;
+			children = (
+				3D3AD9B629A78B730052E998 /* ListView.swift */,
+				3D3AD9B829A78B950052E998 /* ListRowView.swift */,
+				3D3AD9BA29A78BA40052E998 /* AddView.swift */,
+				3D3AD9BC29A78BB00052E998 /* NoItemsView.swift */,
+			);
+			path = "To Do View";
+			sourceTree = "<group>";
+		};
 		3DCD964F29969B1C005F996C = {
 			isa = PBXGroup;
 			children = (
@@ -51,10 +137,14 @@
 		3DCD965A29969B1C005F996C /* m3taChatAI */ = {
 			isa = PBXGroup;
 			children = (
+				3D3AD9A129A5064A0052E998 /* Models */,
+				3DCD966F29971621005F996C /* Views */,
+				3DCD966C29969CD2005F996C /* ViewModel */,
 				3DCD965B29969B1C005F996C /* m3taChatAIApp.swift */,
 				3DCD965D29969B1C005F996C /* ContentView.swift */,
 				3DCD965F29969B1D005F996C /* Assets.xcassets */,
 				3DCD966129969B1D005F996C /* Preview Content */,
+				3DCD967A29972167005F996C /* RoundedShape.swift */,
 			);
 			path = m3taChatAI;
 			sourceTree = "<group>";
@@ -65,6 +155,27 @@
 				3DCD966229969B1D005F996C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3DCD966C29969CD2005F996C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3DCD966D29969CE1005F996C /* ViewModel.swift */,
+				3D3AD9BE29A78BD00052E998 /* ListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3DCD966F29971621005F996C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3D3AD9B529A78B640052E998 /* To Do View */,
+				3D3AD9A529A50D700052E998 /* SettingsView */,
+				3D3AD9A429A50D5D0052E998 /* HomeView */,
+				3D3AD9A329A50D4B0052E998 /* ChatView */,
+				3D3AD9A229A50D300052E998 /* CustomTabView */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +194,9 @@
 			dependencies = (
 			);
 			name = m3taChatAI;
+			packageProductDependencies = (
+				3DCD966A29969C03005F996C /* OpenAISwift */,
+			);
 			productName = m3taChatAI;
 			productReference = 3DCD965829969B1C005F996C /* m3taChatAI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 3DCD964F29969B1C005F996C;
+			packageReferences = (
+				3DCD966929969C03005F996C /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = 3DCD965929969B1C005F996C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +254,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D3AD9C129A78C550052E998 /* ItemModel.swift in Sources */,
+				3D3AD9BB29A78BA40052E998 /* AddView.swift in Sources */,
+				3D3AD9A029A502920052E998 /* MessageData.swift in Sources */,
+				3DCD96712997163B005F996C /* ChatView.swift in Sources */,
+				3D3AD9B729A78B730052E998 /* ListView.swift in Sources */,
+				3DCD967529971B6E005F996C /* TabCurve.swift in Sources */,
+				3DCD967B29972167005F996C /* RoundedShape.swift in Sources */,
+				3D3AD9BF29A78BD00052E998 /* ListViewModel.swift in Sources */,
+				3DCD967329971B3D005F996C /* CustomTabBar.swift in Sources */,
+				3D3AD9B929A78B950052E998 /* ListRowView.swift in Sources */,
 				3DCD965E29969B1C005F996C /* ContentView.swift in Sources */,
+				3D3AD99D29A42C570052E998 /* SettingsView.swift in Sources */,
+				3DCD966E29969CE1005F996C /* ViewModel.swift in Sources */,
 				3DCD965C29969B1C005F996C /* m3taChatAIApp.swift in Sources */,
+				3DCD967729971D3E005F996C /* Home.swift in Sources */,
+				3DCD967929972116005F996C /* HeaderView.swift in Sources */,
+				3D3AD9BD29A78BB00052E998 /* NoItemsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +471,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3DCD966929969C03005F996C /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3DCD966A29969C03005F996C /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3DCD966929969C03005F996C /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3DCD965029969B1C005F996C /* Project object */;
 }
