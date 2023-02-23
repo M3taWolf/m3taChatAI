@@ -1,4 +1,6 @@
 An App, where you can communicate with the chatGPT AI and an implemented To Do list for organzing and  to navigate through your day. Not finished.
+Note: To use it, you need to implement your own Auth Key from openAI: https://openai.com/api/
+
 
 <img width="315" alt="m3ta chat main" src="https://user-images.githubusercontent.com/110381412/220933667-1aec580e-e305-4965-b4c9-47a4ec3e5c32.png">
 <img width="320" alt="m3ta chat chatView" src="https://user-images.githubusercontent.com/110381412/220933681-f3b8168e-09e4-437d-a2f8-759bef101ee4.png">
