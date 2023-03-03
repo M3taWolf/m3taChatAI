@@ -21,7 +21,7 @@ struct NoItemsView: View {
             ScrollView {
                 VStack(spacing: 10) {
                     Text("Let's be PRODUCTIVE!")
-                        .foregroundColor(.white)
+                        .foregroundColor(.cyan)
                         .font(.title)
                         .fontWeight(.semibold)
                     Text("Fill your 2do List with things you need to get done asap and try to work through it in 24 Hours.")

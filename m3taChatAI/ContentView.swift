@@ -36,6 +36,7 @@ import OpenAISwift
                         
                         if selectedTab == "gearshape.fill" {
                             SettingsView()
+                                
                         }
                        
                         Spacer()

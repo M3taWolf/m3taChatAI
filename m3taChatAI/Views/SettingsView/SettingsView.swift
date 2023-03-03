@@ -16,7 +16,7 @@ import SwiftUI
         
         var body: some View {
             
-            NavigationView {
+           NavigationView {
                 ZStack {
                     Color(.systemIndigo)
                         .ignoresSafeArea()
@@ -61,9 +61,9 @@ import SwiftUI
                     .background(Color.cyan)
                     .navigationTitle("Settings")
                     
-            }
+                       }
+                }
         }
-    }
 }
     struct SettingsView_Previews: PreviewProvider {
         static var previews: some View {

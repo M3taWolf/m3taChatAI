@@ -16,7 +16,7 @@ struct Home: View {
             Color(.systemIndigo)
                   .ignoresSafeArea()
             VStack(alignment: .leading) {
-                HeaderView(title1: "The Future is now.", title2: "Ask the AI")
+                HeaderView(title1: "The Future is now.", title2: "Ask the AI.")
                     .ignoresSafeArea()
                 Spacer()
                 

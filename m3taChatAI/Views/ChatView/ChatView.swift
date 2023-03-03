@@ -82,11 +82,12 @@ struct ChatView: View {
                 .onAppear {
                     viewModel.setup()
                 }
+                .background(Color.indigo)
                 .navigationTitle("CHAT WITH AI")
                 .foregroundColor(.white)
                 .preferredColorScheme(.dark)
                 .padding()
-                .background(Color.indigo)
+                //.background(Color.indigo)
                 
                 
             }

@@ -25,7 +25,7 @@ struct HeaderView: View {
         }
         .frame(height: 260)
         .padding(.leading)
-        .background(Color(.systemCyan))
+        .background(Color.cyan)
         .foregroundColor(.white)
         .clipShape(RoundedShape(corners: [.bottomRight]))
     }
