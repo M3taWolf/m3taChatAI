@@ -13,11 +13,14 @@ import OpenAISwift
         
         @State var selectedTab = "house.fill"
         @ObservedObject var viewModel = ViewModel()
+        @State var currentBackgroundColor = Color("Main")
+        private var backgroundColors = [Color("Main"), Color("Dark"), Color("Orange")]
+        
         
         
         var body: some View {
                 ZStack {
-                    Color(.systemIndigo)
+                    currentBackgroundColor
                         .ignoresSafeArea()
                     
                     VStack{

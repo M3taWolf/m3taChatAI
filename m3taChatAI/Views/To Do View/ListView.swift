@@ -10,57 +10,67 @@ import SwiftUI
 struct ListView: View {
     
     @EnvironmentObject var listViewModel: ListViewModel
+    @State var currentBackgroundColor = Color("Main")
+
         
    
     var body: some View {
         NavigationStack {
-            VStack {
-                //Text("To Do")
-                
-                
-                
-                if listViewModel.items.isEmpty {
-                    NoItemsView()
-                        .transition(AnyTransition.opacity
-                            .animation(.easeIn))
-                } else {
-                    List {
-                        ForEach(listViewModel.items) { item in
-                            ListRowView(item: item)
-                                .onTapGesture {
-                                    withAnimation(.linear) {
-                                        listViewModel.updateItem(item: item)
-                                    }
-                                }
-                        }
-                        .onDelete(perform: listViewModel.deleteItem)
-                        .onMove(perform: listViewModel.moveItem)
-                        
-                    }
-                    .background(Color.indigo)
-                    .listStyle(PlainListStyle())
+            ZStack {
+                currentBackgroundColor
+                    .ignoresSafeArea()
+                VStack(alignment: .leading) {
+                    HeaderView(title1: "24 Hours.", title2: "Challenge accepted.")
+                        .ignoresSafeArea()
                     
+                    VStack {
+                        //Text("To Do")
+                        
+                        
+                        
+                        if listViewModel.items.isEmpty {
+                            NoItemsView()
+                                .transition(AnyTransition.opacity
+                                    .animation(.easeIn))
+                        } else {
+                            List {
+                                ForEach(listViewModel.items) { item in
+                                    ListRowView(item: item)
+                                        .onTapGesture {
+                                            withAnimation(.linear) {
+                                                listViewModel.updateItem(item: item)
+                                            }
+                                        }
+                                }
+                                .onDelete(perform: listViewModel.deleteItem)
+                                .onMove(perform: listViewModel.moveItem)
+                                
+                            }
+                            .background(Color.indigo)
+                            .listStyle(PlainListStyle())
+                            
+                        }
+                    }
+                    //.navigationTitle("24H TO DO")
+                    .preferredColorScheme(.dark)
+                    .foregroundColor(.cyan)
+                    
+                    
+                    
+                    
+                    
+                    
+                    .navigationBarItems(
+                        leading: EditButton()
+                            .foregroundColor(.cyan),
+                        trailing:
+                            NavigationLink("Add", destination: AddView())
+                            .foregroundColor(.cyan)
+                    )
                 }
             }
-            .navigationTitle("24H TO DO")
-            .preferredColorScheme(.dark)
-            .foregroundColor(.cyan)
-        
-            
-            
-            
-            
-           
-            .navigationBarItems(
-                leading: EditButton()
-                    .foregroundColor(.cyan),
-                trailing:
-                    NavigationLink("Add", destination: AddView())
-                    .foregroundColor(.cyan)
-            )
         }
     }
-    
 }
 
 struct ListView_Previews: PreviewProvider {

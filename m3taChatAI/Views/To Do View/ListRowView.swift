@@ -10,10 +10,11 @@ import SwiftUI
 struct ListRowView: View {
     
     let item: ItemModel
+    @State var currentBackgroundColor = Color("Main")
     
     var body: some View {
         ZStack{
-            Color(.systemIndigo)
+            currentBackgroundColor
                 .ignoresSafeArea()
             HStack {
                 Image(systemName: item.isCompleted ? "checkmark.circle" : "circle")
@@ -26,7 +27,7 @@ struct ListRowView: View {
             .foregroundColor(.white)
         }
         .preferredColorScheme(.dark)
-        .listRowBackground(Color(.systemIndigo))
+        .listRowBackground(currentBackgroundColor)
     }
 }
 

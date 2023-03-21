@@ -11,11 +11,11 @@ struct NoItemsView: View {
     
     @State var animate: Bool = false
     let secondaryAccentColor = Color("SecondaryAccentColor")
-    
+    @State var currentBackgroundColor = Color("Main")
     
     var body: some View {
         ZStack{
-            Color(.systemIndigo)
+            currentBackgroundColor
                 .ignoresSafeArea()
             
             ScrollView {
@@ -61,7 +61,7 @@ struct NoItemsView: View {
                 
                 
             }
-            
+            .navigationTitle("")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             
         }

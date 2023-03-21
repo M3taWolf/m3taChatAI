@@ -18,6 +18,7 @@ struct ChatView: View {
     @ObservedObject var viewModel = ViewModel()
     @State var text = ""
     @State var messages: [MessageData] = []
+    @State var currentBackgroundColor = Color("Main")
     
     
     var left = false
@@ -26,73 +27,76 @@ struct ChatView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                Color(.systemIndigo)
+                currentBackgroundColor
                     .ignoresSafeArea()
-                
-                VStack{
-                    List {
-                        ForEach(messages) { message in
-                            HStack(){
-                                if(message.isResponse){        // <--- left
-                                    Text(message.message)
-                                        .padding()
-                                        .background(.cyan)
-                                        .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
-                                    //                                        .overlay(alignment: .bottomLeading) {
-                                    //                                            Image(systemName: "arrowtriangle.down.fill")
-                                    //                                                .font(.title)
-                                    //                                                .rotationEffect(.degrees(60))
-                                    //                                                .offset(x: -10, y: 5)
-                                    //                                                .foregroundColor(.green)
-                                    //                                        }
-                                    Spacer()
-                                } else {                        // <--- right
-                                    Spacer()
+                VStack(alignment: .leading) {
+                    HeaderView(title1: "Hey Bekir.", title2: "Ask me anything.")
+                        .ignoresSafeArea()
+                    VStack{
+                        List {
+                            ForEach(messages) { message in
+                                HStack(){
+                                    if(message.isResponse){        // <--- left
+                                        Text(message.message)
+                                            .padding()
+                                            .background(.cyan)
+                                            .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
+                                        //                                        .overlay(alignment: .bottomLeading) {
+                                        //                                            Image(systemName: "arrowtriangle.down.fill")
+                                        //                                                .font(.title)
+                                        //                                                .rotationEffect(.degrees(60))
+                                        //                                                .offset(x: -10, y: 5)
+                                        //                                                .foregroundColor(.green)
+                                        //                                        }
+                                        Spacer()
+                                    } else {                        // <--- right
+                                        Spacer()
+                                        
+                                        Text(message.message)
+                                            .padding()
+                                            .background(.cyan)
+                                            .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
+                                        //                                        .overlay(alignment: .bottomLeading) {
+                                        //                                            Image(systemName: "arrowtriangle.down.fill")
+                                        //                                                .font(.title)
+                                        //                                                .rotationEffect(.degrees(60))
+                                        //                                                .offset(x: 125, y: 4)
+                                        //                                                .foregroundColor(.green)
+                                        //                                        }
+                                    }
                                     
-                                    Text(message.message)
-                                        .padding()
-                                        .background(.cyan)
-                                        .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
-                                    //                                        .overlay(alignment: .bottomLeading) {
-                                    //                                            Image(systemName: "arrowtriangle.down.fill")
-                                    //                                                .font(.title)
-                                    //                                                .rotationEffect(.degrees(60))
-                                    //                                                .offset(x: 125, y: 4)
-                                    //                                                .foregroundColor(.green)
-                                    //                                        }
                                 }
-                                
+                                .frame(maxWidth: .infinity)
                             }
-                            .frame(maxWidth: .infinity)
+                            .listRowBackground(currentBackgroundColor)
+                            
                         }
-                        .listRowBackground(Color(.systemIndigo))
+                        .listStyle(.plain)
+                        
+                        
+                        HStack(alignment: .bottom){
+                            TextField("ASK ME SOMETHING...", text: $text)
+                                .foregroundColor(.white)
+                            Button("GO") {
+                                send()
+                                text = ""
+                            }
+                        }
                     }
-                    .listStyle(.plain)
+                    .onAppear {
+                        viewModel.setup()
+                    }
+                    //.background(Color.indigo)
+                    //.navigationTitle("CHAT WITH AI")
+                    .foregroundColor(.white)
+                    .preferredColorScheme(.dark)
+                    .padding()
+                    //.background(Color.indigo)
                     
                     
-                    HStack(alignment: .bottom){
-                        TextField("ASK ME SOMETHING...", text: $text)
-                            .foregroundColor(.white)
-                        Button("GO") {
-                            send()
-                            text = ""
-                        }
-                    }
                 }
-                .onAppear {
-                    viewModel.setup()
-                }
-                .background(Color.indigo)
-                .navigationTitle("CHAT WITH AI")
-                .foregroundColor(.white)
-                .preferredColorScheme(.dark)
-                .padding()
-                //.background(Color.indigo)
-                
                 
             }
-            
-            
             
         }
     }

@@ -15,10 +15,11 @@ struct AddView: View {
     
     @State var alertTitle: String = ""
     @State var showAlert: Bool = false
+    @State var currentBackgroundColor = Color("Main")
     
     var body: some View {
         ZStack{
-            Color(.systemIndigo)
+            currentBackgroundColor
                 .ignoresSafeArea()
         ScrollView {
                 VStack {

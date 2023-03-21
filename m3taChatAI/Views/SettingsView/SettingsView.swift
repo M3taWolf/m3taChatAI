@@ -9,62 +9,82 @@ import SwiftUI
 
 
     
-    struct SettingsView: View {
+struct SettingsView: View {
+    
+    let personalURL = URL(string: "https://www.github.com/M3taWolf")!
+    let apiURL = URL(string: "https://openai.com/")!
+    @State var currentBackgroundColor = Color("")
+    
+    var backgroundColors = [Color("Main"), Color("Dark"), Color("Orange")]
+    
+    var body: some View {
         
-        let personalURL = URL(string: "https://www.github.com/M3taWolf")!
-        let apiURL = URL(string: "https://openai.com/")!
-        
-        var body: some View {
-            
-           NavigationView {
-                ZStack {
-                    Color(.systemIndigo)
-                        .ignoresSafeArea()
+        NavigationView {
+            ZStack {
+                currentBackgroundColor
+                    .ignoresSafeArea()
+                
+                
+                Form {
                     
                     
-                    Form {
+                    Section(header: Text("Display"),
+                            footer: Text("System settings will override Dark mode and use the current device theme")) {
                         
                         
-                        Section(header: Text("Display"),
-                                footer: Text("System settings will override Dark mode and use the current device theme")) {
+                        Toggle(isOn: .constant(false),
+                               label: {
+                            Text("Dark mode")
                             
-                            
-                            Toggle(isOn: .constant(true),
-                                   label: {
-                                Text("Dark mode")
-                                
-                            })
-                            
-                            
-                            Toggle(isOn: .constant(true),
-                                   label: {
-                                Text("Use system settings")
-                            })
+                        })
+                        
+                        
+                        Toggle(isOn: .constant(false),
+                               label: {
+                            Text("Use system settings")
+                        })
+                        
+                        HStack{
+                            Text("Change Theme")
+                            Spacer()
+                            Image(systemName: "pencil.and.outline")
+                                .onTapGesture {
+                                    if let random = backgroundColors.randomElement() {
+                                        withAnimation{
+                                            currentBackgroundColor = random
+                                       }
+                                  }
+                             }
                         }
-                        
-                        Section {
-                            //Label("Go check my GitHub Account", systemImage: "link")
-                            Link("Visit my personal GitHub", destination: personalURL)
-                            
-                                .foregroundColor(.cyan)
-                                .font(.system(size: 16, weight: .semibold))
-                        }
-                        Section {
-                            Link("This API is powered by OpenAI", destination: apiURL)
-                        }
-                        
-                        .foregroundColor(.cyan)
-                        .font(.system(size: 16, weight: .semibold))
-                        
                     }
                     
-                    .background(Color.cyan)
-                    .navigationTitle("Settings")
+                    Section {
+                        //Label("Go check my GitHub Account", systemImage: "link")
+                        Link("Visit my personal GitHub", destination: personalURL)
+                        
+                            .foregroundColor(.cyan)
+                            .font(.system(size: 16, weight: .semibold))
+                    }
+                    Section {
+                        Link("This API is powered by OpenAI", destination: apiURL)
+                    }
                     
-                       }
+                    .foregroundColor(.cyan)
+                    .font(.system(size: 16, weight: .semibold))
+                    
                 }
+                
+                .background(Color.cyan)
+                .navigationTitle("Settings")
+                
+            }
+            
+            
+            
         }
+    }
 }
+
     struct SettingsView_Previews: PreviewProvider {
         static var previews: some View {
             SettingsView()
