@@ -49,7 +49,7 @@ struct SettingsView: View {
                             Spacer()
                             Image(systemName: "pencil.and.outline")
                                 .onTapGesture {
-                                    if let random = backgroundColors.randomElement() {
+                                    if let random = backgroundColors.randomElement() { // App storage
                                         withAnimation{
                                             currentBackgroundColor = random
                                        }
