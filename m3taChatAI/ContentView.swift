@@ -20,6 +20,7 @@ import OpenAISwift
         
         var body: some View {
                 ZStack {
+                    
                     currentBackgroundColor
                         .ignoresSafeArea()
                     
@@ -49,6 +50,7 @@ import OpenAISwift
             }
         }
     }
+    
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {
             ContentView()

@@ -15,6 +15,15 @@
 		3D3AD9BD29A78BB00052E998 /* NoItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9BC29A78BB00052E998 /* NoItemsView.swift */; };
 		3D3AD9BF29A78BD00052E998 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9BE29A78BD00052E998 /* ListViewModel.swift */; };
 		3D3AD9C129A78C550052E998 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D3AD9C029A78C550052E998 /* ItemModel.swift */; };
+		3D5C0E5C29D5A4DA00289902 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5C0E5B29D5A4DA00289902 /* FirebaseAnalytics */; };
+		3D5C0E5E29D5A4DA00289902 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5C0E5D29D5A4DA00289902 /* FirebaseAnalyticsSwift */; };
+		3D5C0E6229D5A6DE00289902 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3D5C0E6129D5A6DE00289902 /* GoogleService-Info.plist */; };
+		3D5C0E6529D5B74800289902 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3D5C0E6429D5B74800289902 /* FirebaseAuth */; };
+		3D5C0E6829D5B7F800289902 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C0E6729D5B7F800289902 /* AuthenticationView.swift */; };
+		3D5C0E6A29D5BCD800289902 /* SignInEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C0E6929D5BCD800289902 /* SignInEmailView.swift */; };
+		3D5C0E6C29D5BCFB00289902 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C0E6B29D5BCFB00289902 /* SignInViewModel.swift */; };
+		3D5C0E6E29D5C33400289902 /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C0E6D29D5C33400289902 /* AuthenticationManager.swift */; };
+		3D5C0E7029D7097800289902 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5C0E6F29D7097800289902 /* SettingsViewModel.swift */; };
 		3DCD965C29969B1C005F996C /* m3taChatAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD965B29969B1C005F996C /* m3taChatAIApp.swift */; };
 		3DCD965E29969B1C005F996C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCD965D29969B1C005F996C /* ContentView.swift */; };
 		3DCD966029969B1D005F996C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3DCD965F29969B1D005F996C /* Assets.xcassets */; };
@@ -38,6 +47,12 @@
 		3D3AD9BC29A78BB00052E998 /* NoItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoItemsView.swift; sourceTree = "<group>"; };
 		3D3AD9BE29A78BD00052E998 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		3D3AD9C029A78C550052E998 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
+		3D5C0E6129D5A6DE00289902 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3D5C0E6729D5B7F800289902 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		3D5C0E6929D5BCD800289902 /* SignInEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInEmailView.swift; sourceTree = "<group>"; };
+		3D5C0E6B29D5BCFB00289902 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		3D5C0E6D29D5C33400289902 /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		3D5C0E6F29D7097800289902 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		3DCD965829969B1C005F996C /* m3taChatAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = m3taChatAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DCD965B29969B1C005F996C /* m3taChatAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = m3taChatAIApp.swift; sourceTree = "<group>"; };
 		3DCD965D29969B1C005F996C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,7 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D5C0E5E29D5A4DA00289902 /* FirebaseAnalyticsSwift in Frameworks */,
+				3D5C0E5C29D5A4DA00289902 /* FirebaseAnalytics in Frameworks */,
 				3DCD966B29969C03005F996C /* OpenAISwift in Frameworks */,
+				3D5C0E6529D5B74800289902 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,11 +136,29 @@
 			path = "To Do View";
 			sourceTree = "<group>";
 		};
+		3D5C0E6329D5B74800289902 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3D5C0E6629D5B7CC00289902 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				3D5C0E6729D5B7F800289902 /* AuthenticationView.swift */,
+				3D5C0E6929D5BCD800289902 /* SignInEmailView.swift */,
+				3D5C0E6D29D5C33400289902 /* AuthenticationManager.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
 		3DCD964F29969B1C005F996C = {
 			isa = PBXGroup;
 			children = (
 				3DCD965A29969B1C005F996C /* m3taChatAI */,
 				3DCD965929969B1C005F996C /* Products */,
+				3D5C0E6329D5B74800289902 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,6 +178,7 @@
 				3DCD966C29969CD2005F996C /* ViewModel */,
 				3DCD965B29969B1C005F996C /* m3taChatAIApp.swift */,
 				3DCD965D29969B1C005F996C /* ContentView.swift */,
+				3D5C0E6129D5A6DE00289902 /* GoogleService-Info.plist */,
 				3DCD965F29969B1D005F996C /* Assets.xcassets */,
 				3DCD966129969B1D005F996C /* Preview Content */,
 				3DCD967A29972167005F996C /* RoundedShape.swift */,
@@ -162,6 +199,8 @@
 			children = (
 				3DCD966D29969CE1005F996C /* ViewModel.swift */,
 				3D3AD9BE29A78BD00052E998 /* ListViewModel.swift */,
+				3D5C0E6B29D5BCFB00289902 /* SignInViewModel.swift */,
+				3D5C0E6F29D7097800289902 /* SettingsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -169,6 +208,7 @@
 		3DCD966F29971621005F996C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3D5C0E6629D5B7CC00289902 /* Authentication */,
 				3D3AD9B529A78B640052E998 /* To Do View */,
 				3D3AD9A529A50D700052E998 /* SettingsView */,
 				3D3AD9A429A50D5D0052E998 /* HomeView */,
@@ -196,6 +236,9 @@
 			name = m3taChatAI;
 			packageProductDependencies = (
 				3DCD966A29969C03005F996C /* OpenAISwift */,
+				3D5C0E5B29D5A4DA00289902 /* FirebaseAnalytics */,
+				3D5C0E5D29D5A4DA00289902 /* FirebaseAnalyticsSwift */,
+				3D5C0E6429D5B74800289902 /* FirebaseAuth */,
 			);
 			productName = m3taChatAI;
 			productReference = 3DCD965829969B1C005F996C /* m3taChatAI.app */;
@@ -227,6 +270,7 @@
 			mainGroup = 3DCD964F29969B1C005F996C;
 			packageReferences = (
 				3DCD966929969C03005F996C /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+				3D5C0E5A29D5A4DA00289902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 3DCD965929969B1C005F996C /* Products */;
 			projectDirPath = "";
@@ -243,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DCD966329969B1D005F996C /* Preview Assets.xcassets in Resources */,
+				3D5C0E6229D5A6DE00289902 /* GoogleService-Info.plist in Resources */,
 				3DCD966029969B1D005F996C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +303,12 @@
 				3D3AD9BB29A78BA40052E998 /* AddView.swift in Sources */,
 				3D3AD9A029A502920052E998 /* MessageData.swift in Sources */,
 				3DCD96712997163B005F996C /* ChatView.swift in Sources */,
+				3D5C0E6C29D5BCFB00289902 /* SignInViewModel.swift in Sources */,
+				3D5C0E6A29D5BCD800289902 /* SignInEmailView.swift in Sources */,
 				3D3AD9B729A78B730052E998 /* ListView.swift in Sources */,
 				3DCD967529971B6E005F996C /* TabCurve.swift in Sources */,
 				3DCD967B29972167005F996C /* RoundedShape.swift in Sources */,
+				3D5C0E6E29D5C33400289902 /* AuthenticationManager.swift in Sources */,
 				3D3AD9BF29A78BD00052E998 /* ListViewModel.swift in Sources */,
 				3DCD967329971B3D005F996C /* CustomTabBar.swift in Sources */,
 				3D3AD9B929A78B950052E998 /* ListRowView.swift in Sources */,
@@ -268,7 +316,9 @@
 				3D3AD99D29A42C570052E998 /* SettingsView.swift in Sources */,
 				3DCD966E29969CE1005F996C /* ViewModel.swift in Sources */,
 				3DCD965C29969B1C005F996C /* m3taChatAIApp.swift in Sources */,
+				3D5C0E6829D5B7F800289902 /* AuthenticationView.swift in Sources */,
 				3DCD967729971D3E005F996C /* Home.swift in Sources */,
+				3D5C0E7029D7097800289902 /* SettingsViewModel.swift in Sources */,
 				3DCD967929972116005F996C /* HeaderView.swift in Sources */,
 				3D3AD9BD29A78BB00052E998 /* NoItemsView.swift in Sources */,
 			);
@@ -473,6 +523,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3D5C0E5A29D5A4DA00289902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 10.4.0;
+			};
+		};
 		3DCD966929969C03005F996C /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
@@ -484,6 +542,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3D5C0E5B29D5A4DA00289902 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5C0E5A29D5A4DA00289902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3D5C0E5D29D5A4DA00289902 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5C0E5A29D5A4DA00289902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		3D5C0E6429D5B74800289902 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3D5C0E5A29D5A4DA00289902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		3DCD966A29969C03005F996C /* OpenAISwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 3DCD966929969C03005F996C /* XCRemoteSwiftPackageReference "OpenAISwift" */;

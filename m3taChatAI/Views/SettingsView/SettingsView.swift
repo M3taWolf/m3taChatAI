@@ -14,6 +14,8 @@ struct SettingsView: View {
     let personalURL = URL(string: "https://www.github.com/M3taWolf")!
     let apiURL = URL(string: "https://openai.com/")!
     @State var currentBackgroundColor = Color("")
+    @StateObject private var viewModel = SettingsViewModel()
+    //@Binding var showSignInView: Bool
     
     var backgroundColors = [Color("Main"), Color("Dark"), Color("Orange")]
     
@@ -72,7 +74,27 @@ struct SettingsView: View {
                     .foregroundColor(.cyan)
                     .font(.system(size: 16, weight: .semibold))
                     
+                    Section {
+                        Button("Log out") {
+                            Task {
+                                do {
+                                    try viewModel.signOut()
+                                   // showSignInView = true
+                                } catch {
+                                    print()
+                                }
+                            }
+                        }
+                    }
+                    
+                    .foregroundColor(.cyan)
+                    .font(.system(size: 16, weight: .semibold))
+                    
+                
+                    
                 }
+                
+                
                 
                 .background(Color.cyan)
                 .navigationTitle("Settings")

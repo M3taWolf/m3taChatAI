@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct m3taChatAIApp: App {
     
     @StateObject var listViewModel: ListViewModel = ListViewModel()
+    
+    init() {
+        FirebaseApp.configure()
+        
+    }
     
     var body: some Scene {
         WindowGroup {

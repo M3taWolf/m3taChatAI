@@ -23,9 +23,6 @@ struct Home: View {
                     Image(systemName: "")
                     
                 }
-                
-                
-                
             }
         })
     }
