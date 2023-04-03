@@ -25,7 +25,7 @@ struct ChatView: View {
     
     
     var body: some View {
-        NavigationStack{
+        NavigationStack{ 
             ZStack{
                 currentBackgroundColor
                     .ignoresSafeArea()

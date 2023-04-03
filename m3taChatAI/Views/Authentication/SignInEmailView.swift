@@ -15,51 +15,60 @@ struct SignInEmailView: View {
     
     
     var body: some View {
-        ZStack {
-            currentBackgroundColor
-                .ignoresSafeArea()
-            VStack {
-                HeaderView(title1: "Hey Human.", title2: "Please sign in.")
+            ZStack {
+                currentBackgroundColor
                     .ignoresSafeArea()
-                Spacer()
                 VStack {
-                    TextField("eMail", text: $viewModel.email)
-                        .padding()
-                        .foregroundColor(.green)
-                        .background(Color.cyan.opacity(0.4))
-                        .cornerRadius(30)
-                    
-                    SecureField("Password", text: $viewModel.password)
-                        .padding()
-                        .foregroundColor(.green)
-                        .background(Color.cyan.opacity(0.4))
-                        .cornerRadius(30)
-                    
-                    Button {
-                        viewModel.signIn()
-                    } label: {
-                        Text("Sign In")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .frame(height: 55)
-                        .frame(maxWidth: .infinity)
-                        .background(Color.cyan)
-                        .cornerRadius(30)
-                    
+                    HeaderView(title1: "Hey Human.", title2: "Please sign in.")
+                        .ignoresSafeArea()
+                    Spacer()
+                    VStack {
+                        TextField("eMail", text: $viewModel.email)
+                            .padding()
+                            .foregroundColor(.green)
+                            .background(Color.cyan.opacity(0.4))
+                            .cornerRadius(20)
+                        
+                        SecureField("Password", text: $viewModel.password)
+                            .padding()
+                            .foregroundColor(.green)
+                            .background(Color.cyan.opacity(0.4))
+                            .cornerRadius(20)
+                        
+                        Button {
+                            viewModel.signIn()
+                           
+                        } label: {
+                            NavigationLink("log in", destination: ContentView())
+                            //Text("Sign In")
+                            
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .frame(height: 55)
+                            .frame(maxWidth: .infinity)
+                            .background(Color.cyan)
+                            .cornerRadius(20)
+                            
+                            
+                    }
+                        //Spacer()
+                        
+                    }
+                    .padding()
                 }
-                    //Spacer()
-                    
-                }
-                .padding()
             }
-        }
+            
+        
     }
 }
 
 struct SignInEmailView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationStack {
+
             SignInEmailView()
+                .environmentObject(ListViewModel())
+                .environmentObject(SignInViewModel())
         }
     }
 }

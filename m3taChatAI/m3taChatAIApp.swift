@@ -20,8 +20,9 @@ struct m3taChatAIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
+            NavigationStack {
                 
+                //SignInEmailView()
                 ContentView()
             }
             .environmentObject(listViewModel)

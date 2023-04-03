@@ -48,6 +48,7 @@ import OpenAISwift
                         
                 }
             }
+                .navigationBarBackButtonHidden(true)
         }
     }
     

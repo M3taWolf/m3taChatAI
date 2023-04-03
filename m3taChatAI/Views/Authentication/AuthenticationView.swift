@@ -22,13 +22,13 @@ struct AuthenticationView: View {
                 NavigationLink {
                     SignInEmailView()
                 } label: {
-                    Text("Sign In With eMail")
+                    Text("Sign In with eMail")
                         .font(.headline)
                         .foregroundColor(.white)
                         .frame(height: 55)
                         .frame(maxWidth: .infinity)
                         .background(Color.cyan)
-                        .cornerRadius(30)
+                        .cornerRadius(20)
                 }
                  
                 .padding()
