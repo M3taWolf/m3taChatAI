@@ -13,6 +13,7 @@ struct SettingsView: View {
     
     let personalURL = URL(string: "https://www.github.com/M3taWolf")!
     let apiURL = URL(string: "https://openai.com/")!
+    //@Binding var currentBackgroundColor: Color
     @State var currentBackgroundColor = Color("Main")
     @StateObject private var viewModel = SettingsViewModel()
     //@Binding var showSignInView: Bool
@@ -80,10 +81,9 @@ struct SettingsView: View {
                             Task {
                                 do {
                                     try viewModel.signOut()
-                                    withAnimation(.default) {
+                                
                                         showLogOut = true
-                                         NavigationLink("Log out", destination: AuthenticationView())
-                                    }
+                                    
                                    
                                      //showSignInView = true
                                 } catch {
@@ -100,6 +100,9 @@ struct SettingsView: View {
             //.sheet(isPresented: $showLogOut, content: AuthenticationView())
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
             
+        }
+        .navigationDestination(isPresented: $showLogOut) {
+            AuthenticationView()
         }
         
         
@@ -190,13 +193,19 @@ struct SettingsView: View {
 //            .background(currentBackgroundColor)
     }
         
+        
 }
 
     struct SettingsView_Previews: PreviewProvider {
         static var previews: some View {
-            SettingsView()
-                .environmentObject(ListViewModel())
-                .environmentObject(SignInViewModel())
-                .environmentObject(SettingsViewModel())
+            //@State var color = Color
+            NavigationStack {
+                SettingsView()
+                //SettingsView(currentBackgroundColor: $color)
+                    .environmentObject(ListViewModel())
+                    .environmentObject(SignInViewModel())
+                    .environmentObject(SettingsViewModel())
+                    
+            }
         }
     }

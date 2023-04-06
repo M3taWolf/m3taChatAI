@@ -33,6 +33,6 @@ struct HeaderView: View {
 
 struct AuthHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView(title1: "The Future is now.", title2: "Ask the AI")
+        HeaderView(title1: "The Future is now.", title2: "Ask the AI.")
     }
 }

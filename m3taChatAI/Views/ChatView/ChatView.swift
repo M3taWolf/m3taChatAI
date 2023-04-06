@@ -17,7 +17,7 @@ enum ChatMessageDirection {
 struct ChatView: View {
     @ObservedObject var viewModel = ViewModel()
     @State var text = ""
-    @State var messages: [MessageData] = []
+    @State var messages: [MessageData] = [MessageData(message: "M3taAI: Hey how are you feeling today?", isResponse: true)]
     @State var currentBackgroundColor = Color("Main")
     
     
@@ -25,10 +25,9 @@ struct ChatView: View {
     
     
     var body: some View {
-        NavigationStack{ 
             ZStack{
                 currentBackgroundColor
-                    .ignoresSafeArea()
+                   .ignoresSafeArea()
                 VStack(alignment: .leading) {
                     HeaderView(title1: "Hey Bekir.", title2: "Ask me anything.")
                         .ignoresSafeArea()
@@ -36,6 +35,7 @@ struct ChatView: View {
                         List {
                             ForEach(messages) { message in
                                 HStack(){
+                                    
                                     if(message.isResponse){        // <--- left
                                         Text(message.message)
                                             .padding()
@@ -66,12 +66,13 @@ struct ChatView: View {
                                     }
                                     
                                 }
-                                .frame(maxWidth: .infinity)
+                                
+                                //.frame(maxWidth: .infinity)
                             }
                             .listRowBackground(currentBackgroundColor)
                             
                         }
-                        .listStyle(.plain)
+                         .listStyle(.plain)
                         
                         
                         HStack(alignment: .bottom){
@@ -98,7 +99,7 @@ struct ChatView: View {
                 
             }
             
-        }
+        
     }
     
     func send() {

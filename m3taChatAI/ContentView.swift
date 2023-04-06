@@ -39,6 +39,7 @@ import OpenAISwift
                         }
                         
                         if selectedTab == "gearshape.fill" {
+//                            SettingsView(currentBackgroundColor: $currentBackgroundColor)
                             SettingsView()
                                 
                         }

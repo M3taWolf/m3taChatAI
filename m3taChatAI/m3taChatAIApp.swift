@@ -22,8 +22,8 @@ struct m3taChatAIApp: App {
         WindowGroup {
             NavigationStack {
                 
-                //SignInEmailView()
-                ContentView()
+                SignInEmailView()
+                //ContentView()
             }
             .environmentObject(listViewModel)
         }
