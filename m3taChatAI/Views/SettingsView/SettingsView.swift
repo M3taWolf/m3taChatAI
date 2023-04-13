@@ -27,173 +27,85 @@ struct SettingsView: View {
             currentBackgroundColor
                 .ignoresSafeArea()
             VStack {
-                Text("Settings")
-                    .font(.title)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .topLeading)
-                    .padding(.leading)
-                
-                Toggle(isOn: .constant(false),
-                       label: {
-                    Text("Dark mode")
+                HeaderView(title1: "Your App.", title2: "Your Preferences.")
+                    .ignoresSafeArea()
+               VStack {
                     
-                })
-                .padding()
-                
-                Toggle(isOn: .constant(false),
-                       label: {
-                    Text("Use system settings")
-                })
-                .padding()
-                HStack{
-                    Text("Change Theme")
-                    Spacer()
-                    Image(systemName: "pencil.and.outline")
-                        .onTapGesture {
-                            if let random = backgroundColors.randomElement() { // App storage
-                                withAnimation{
-                                    currentBackgroundColor = random
+                    Toggle(isOn: .constant(false),
+                           label: {
+                        Text("Dark mode")
+                            .font(.system(size: 18, weight: .semibold))
+                        
+                    })
+                    .padding()
+                    
+                    Toggle(isOn: .constant(false),
+                           label: {
+                        Text("Use system settings")
+                            .font(.system(size: 18, weight: .semibold))
+                    })
+                    .padding()
+                    HStack{
+                        Text("Change Theme")
+                            .font(.system(size: 18, weight: .semibold))
+                        Spacer()
+                        Image(systemName: "pencil.and.outline")
+                            .onTapGesture {
+                                if let random = backgroundColors.randomElement() { // App storage
+                                    withAnimation{
+                                        currentBackgroundColor = random
+                                    }
                                 }
                             }
+                    }
+                    .padding()
+                    
+                   //Label("Go check my GitHub Account", systemImage: "link")
+                   
+                    Link("Visit my personal GitHub", destination: personalURL)
+                       .foregroundColor(.cyan)
+                       .font(.system(size: 16, weight: .semibold))
+                       .background(RoundedRectangle(cornerRadius: 20).frame(width: 250, height: 50))
+                       .padding(.top, 30)
+                   
+                    
+                    
+                    Link("This API is powered by OpenAI", destination: apiURL)
+                        .foregroundColor(.cyan)
+                        .font(.system(size: 16, weight: .semibold))
+                        .background(RoundedRectangle(cornerRadius: 20).frame(width: 250, height: 50))
+                        .padding(.top, 30)
+                    
+                    Button("Log out") {
+                        Task {
+                            do {
+                                try viewModel.signOut()
+                                
+                                showLogOut = true
+                                
+                                
+                                //showSignInView = true
+                            } catch {
+                                print()
+                            }
                         }
-                }
-                .padding()
-                
-                //Label("Go check my GitHub Account", systemImage: "link")
-                Link("Visit my personal GitHub", destination: personalURL)
-                
-                    .foregroundColor(.cyan)
-                    .font(.system(size: 16, weight: .semibold))
-                
+                        
+                    }
                     .background(RoundedRectangle(cornerRadius: 20).frame(width: 250, height: 50))
                     .padding(.top, 30)
-                
-                
-                                            Link("This API is powered by OpenAI", destination: apiURL)
-                                        
+                   
                     
-                                        .foregroundColor(.cyan)
-                                        .font(.system(size: 16, weight: .semibold))
-                                        .background(RoundedRectangle(cornerRadius: 20).frame(width: 250, height: 50))
-                                        .padding(.top, 30)
                     
-                Button("Log out") {
-                            Task {
-                                do {
-                                    try viewModel.signOut()
-                                
-                                        showLogOut = true
-                                    
-                                   
-                                     //showSignInView = true
-                                } catch {
-                                    print()
-                                }
-                            }
-                    
-                        }
-                .background(RoundedRectangle(cornerRadius: 20).frame(width: 250, height: 50))
-                .padding(.top, 30)
-
+                }
+                //.sheet(isPresented: $showLogOut, content: AuthenticationView())
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                 
             }
-            //.sheet(isPresented: $showLogOut, content: AuthenticationView())
-            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-            
         }
         .navigationDestination(isPresented: $showLogOut) {
             AuthenticationView()
         }
-        
-        
-        //NavigationView {
-//            VStack {
-//                Text("Settings")
-//                currentBackgroundColor
-//                    .ignoresSafeArea()
-//
-//
-//
-//
-//               // Form {
-//
-//
-//                    Section(header: Text("Display"),
-//                            footer: Text("System settings will override Dark mode and use the current device theme")) {
-//
-//
-//                        Toggle(isOn: .constant(false),
-//                               label: {
-//                            Text("Dark mode")
-//
-//                        })
-//
-//
-//                        Toggle(isOn: .constant(false),
-//                               label: {
-//                            Text("Use system settings")
-//                        })
-//
-//                        HStack{
-//                            Text("Change Theme")
-//                            Spacer()
-//                            Image(systemName: "pencil.and.outline")
-//                                .onTapGesture {
-//                                    if let random = backgroundColors.randomElement() { // App storage
-//                                        withAnimation{
-//                                            currentBackgroundColor = random
-//                                        }
-//                                    }
-//                                }
-//                        }
-//                    }
-//
-//                    Section {
-//                        //Label("Go check my GitHub Account", systemImage: "link")
-//                        Link("Visit my personal GitHub", destination: personalURL)
-//
-//                            .foregroundColor(.cyan)
-//                            .font(.system(size: 16, weight: .semibold))
-//                    }
-//                    Section {
-//                        Link("This API is powered by OpenAI", destination: apiURL)
-//                    }
-//
-//                    .foregroundColor(.cyan)
-//                    .font(.system(size: 16, weight: .semibold))
-//
-//                    Section {
-//                        Button("Log out") {
-//                            Task {
-//                                do {
-//                                    try viewModel.signOut()
-//                                    NavigationLink("Log out", destination: AuthenticationView())
-//                                    // showSignInView = true
-//                                } catch {
-//                                    print()
-//                                }
-//                            }
-//                        }
-//                    //}
-//
-//                    .foregroundColor(.cyan)
-//                    .font(.system(size: 16, weight: .semibold))
-//
-//
-//
-//               // }
-//                .background(Color.cyan)
-//                .navigationTitle("Settings")
-//
-//            }
-//
-//
-//
-//        }
-//            .background(currentBackgroundColor)
     }
-        
-        
 }
 
     struct SettingsView_Previews: PreviewProvider {
