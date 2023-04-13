@@ -12,6 +12,7 @@ import Firebase
 struct m3taChatAIApp: App {
     
     @StateObject var listViewModel: ListViewModel = ListViewModel()
+    @StateObject private var viewModel = SignInViewModel()
     
     init() {
         FirebaseApp.configure()
@@ -21,9 +22,13 @@ struct m3taChatAIApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack {
-                
+                if(viewModel.hasUser) {
+                    ContentView()
+                } else {
+                    SignInEmailView().environmentObject(viewModel)
+                }
                 //SignInEmailView()
-                ContentView()
+                //ContentView()
             }
             .environmentObject(listViewModel)
         }

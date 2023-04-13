@@ -13,7 +13,7 @@ struct CustomTabBar: View {
    
     
     // Storing each Tab Midpoint to animate in future..
-    @State var tabPoints : [CGFloat] = []
+    @State var tabPoints : [String : CGFloat] = [:]
     
     var body: some View {
         ZStack {
@@ -29,6 +29,7 @@ struct CustomTabBar: View {
                 
                 
                 TabBarButton(image: "list.bullet", selectedTab: $selectedTab, tabPoints: $tabPoints)
+                
                 
                 TabBarButton(image: "gearshape.fill", selectedTab: $selectedTab, tabPoints: $tabPoints)
                 
@@ -60,20 +61,21 @@ struct CustomTabBar: View {
     // extracting point..
     func getCurvePoint() ->CGFloat {
         
+
+        return tabPoints[selectedTab] ?? 300
+        
         // if tabpoint is empty..
-        if tabPoints.isEmpty{
-            return 10
-        }
-        else {
-            switch selectedTab {
-            case "house.fill" : return  tabPoints [0]
-            case "message.fill" : return tabPoints [1]
-            case "list.bullet" : return tabPoints [2]
-            case "gearshape.fill" : return tabPoints [3]
-            default : return tabPoints[0]
-                
-            }
-        }
+       
+//        else {
+//            switch selectedTab {
+//            case "house.fill" : return  tabPoints [0]
+//            case "message.fill" : return tabPoints [1]
+//            case "list.bullet" : return tabPoints [2]
+//            case "gearshape.fill" : return tabPoints [3]
+//            default : return tabPoints[0]
+//
+//            }
+//        }
     }
 }
 
@@ -89,7 +91,7 @@ struct TabBarButton: View {
     
     var image: String
     @Binding var selectedTab: String
-    @Binding var tabPoints : [CGFloat]
+    @Binding var tabPoints : [String : CGFloat]
     
     var body: some View {
         
@@ -102,9 +104,8 @@ struct TabBarButton: View {
             DispatchQueue.main.async {
                 
                 // avoiding junk data...
-                if tabPoints.count <= 4 {
-                    tabPoints.append(midX)
-                }
+             
+                tabPoints[image] = midX
             }
            
             return AnyView(
