@@ -41,13 +41,8 @@ struct ChatView: View {
                                             .padding()
                                             .background(.cyan)
                                             .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
-                                        //                                        .overlay(alignment: .bottomLeading) {
-                                        //                                            Image(systemName: "arrowtriangle.down.fill")
-                                        //                                                .font(.title)
-                                        //                                                .rotationEffect(.degrees(60))
-                                        //                                                .offset(x: -10, y: 5)
-                                        //                                                .foregroundColor(.green)
-                                        //                                        }
+                                      
+                                        
                                         Spacer()
                                     } else {                        // <--- right
                                         Spacer()
@@ -56,21 +51,11 @@ struct ChatView: View {
                                             .padding()
                                             .background(.cyan)
                                             .clipShape(RoundedRectangle(cornerRadius: 16.0, style: .continuous))
-                                        //                                        .overlay(alignment: .bottomLeading) {
-                                        //                                            Image(systemName: "arrowtriangle.down.fill")
-                                        //                                                .font(.title)
-                                        //                                                .rotationEffect(.degrees(60))
-                                        //                                                .offset(x: 125, y: 4)
-                                        //                                                .foregroundColor(.green)
-                                        //                                        }
+                                   
                                     }
-                                    
                                 }
-                                
-                                //.frame(maxWidth: .infinity)
                             }
                             .listRowBackground(currentBackgroundColor)
-                            
                         }
                          .listStyle(.plain)
                         
@@ -87,19 +72,12 @@ struct ChatView: View {
                     .onAppear {
                         viewModel.setup()
                     }
-                    //.background(Color.indigo)
-                    //.navigationTitle("CHAT WITH AI")
                     .foregroundColor(.white)
                     .preferredColorScheme(.dark)
                     .padding()
-                    //.background(Color.indigo)
-                    
-                    
-                }
-                
+
             }
-            
-        
+        }
     }
     
     func send() {

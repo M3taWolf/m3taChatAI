@@ -28,7 +28,7 @@ struct AddView: View {
                         .frame(height: 55)
                         .foregroundColor(.black)
                         .background(Color(.white))
-                        .cornerRadius(30)
+                        .cornerRadius(20)
                         
                     
                     Button(action: saveButtonPressed, label: {
@@ -38,7 +38,7 @@ struct AddView: View {
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
                             .background(Color.cyan)
-                            .cornerRadius(30)
+                            .cornerRadius(20)
                         
                     })
                     
@@ -47,9 +47,7 @@ struct AddView: View {
             }
             .navigationTitle("Add an Item ➕")
             .foregroundColor(.cyan)
-            .alert(isPresented: $showAlert, content: getAlert )
-            
-            
+            .alert(isPresented: $showAlert, content: getAlert)
         }
     }
     
@@ -58,10 +56,8 @@ struct AddView: View {
         if  textIsAppropriate() {
             listViewModel.addItem(title: textFieldText)
             presentationMode.wrappedValue.dismiss()
-            
-            
+
         }
-        
     }
     
     func textIsAppropriate() -> Bool {
@@ -70,9 +66,9 @@ struct AddView: View {
             showAlert.toggle()
             return false
         }
-        
         return true
     }
+    
     
     func getAlert() -> Alert {
         return Alert(title: Text(alertTitle))

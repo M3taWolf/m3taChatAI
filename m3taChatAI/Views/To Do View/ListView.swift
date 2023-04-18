@@ -24,10 +24,6 @@ struct ListView: View {
                         .ignoresSafeArea()
                     
                     VStack {
-                        //Text("To Do")
-                        
-                        
-                        
                         if listViewModel.items.isEmpty {
                             NoItemsView()
                                 .transition(AnyTransition.opacity
@@ -39,8 +35,8 @@ struct ListView: View {
                                         .onTapGesture {
                                             withAnimation(.linear) {
                                                 listViewModel.updateItem(item: item)
-                                            }
                                         }
+                                    }
                                 }
                                 .onDelete(perform: listViewModel.deleteItem)
                                 .onMove(perform: listViewModel.moveItem)
@@ -51,21 +47,17 @@ struct ListView: View {
                             
                         }
                     }
-                    //.navigationTitle("24H TO DO")
+                    
                     .preferredColorScheme(.dark)
                     .foregroundColor(.cyan)
-                    
-                    
-                    
-                    
-                    
-                    
                     .navigationBarItems(
                         leading: EditButton()
                             .foregroundColor(.cyan),
                         trailing:
                             NavigationLink("Add", destination: AddView())
+                        
                             .foregroundColor(.cyan)
+                        
                     )
                 }
             }
@@ -82,3 +74,5 @@ struct ListView_Previews: PreviewProvider {
         .environmentObject(ListViewModel())
     }
 }
+
+   

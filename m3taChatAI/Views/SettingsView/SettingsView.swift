@@ -63,13 +63,13 @@ struct SettingsView: View {
                    //Label("Go check my GitHub Account", systemImage: "link")
                    
                     Link("Visit my personal GitHub", destination: personalURL)
-                       .foregroundColor(.cyan)
+                       .foregroundColor(.white)
                        .font(.system(size: 16, weight: .semibold))
-                       .background(RoundedRectangle(cornerRadius: 20).frame(width: 250, height: 50))
+                       .background(RoundedRectangle(cornerRadius: 20).fill(.cyan).frame(width: 250, height: 50))
+                       
                        .padding(.top, 30)
                    
-                    
-                    
+
                     Link("This API is powered by OpenAI", destination: apiURL)
                         .foregroundColor(.cyan)
                         .font(.system(size: 16, weight: .semibold))
@@ -89,7 +89,6 @@ struct SettingsView: View {
                                 print()
                             }
                         }
-                        
                     }
                     .background(RoundedRectangle(cornerRadius: 20).frame(width: 250, height: 50))
                     .padding(.top, 30)
@@ -99,7 +98,6 @@ struct SettingsView: View {
                 }
                 //.sheet(isPresented: $showLogOut, content: AuthenticationView())
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-                
             }
         }
         .navigationDestination(isPresented: $showLogOut) {

@@ -13,8 +13,6 @@ struct Home: View {
     
     var body: some View {
         ZStack(alignment: .bottom, content: {
-//            Color(.systemIndigo)
-//                  .ignoresSafeArea()
             VStack(alignment: .leading) {
                 HeaderView(title1: "The Future is now.", title2: "Ask the AI.")
                     .ignoresSafeArea()

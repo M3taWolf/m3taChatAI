@@ -28,6 +28,7 @@ struct ListRowView: View {
         }
         .preferredColorScheme(.dark)
         .listRowBackground(currentBackgroundColor)
+        
     }
 }
 
@@ -42,6 +43,5 @@ struct ListRowView_Previews: PreviewProvider {
             ListRowView(item: item1)
             ListRowView(item: item2)
         }
-        //.previewLayout(.sizeThatFits)
     }
 }

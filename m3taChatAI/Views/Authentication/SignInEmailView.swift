@@ -25,13 +25,13 @@ struct SignInEmailView: View {
                     VStack {
                         TextField("eMail", text: $viewModel.email)
                             .padding()
-                            .foregroundColor(.green)
+                            .foregroundColor(.white)
                             .background(Color.cyan.opacity(0.4))
                             .cornerRadius(20)
                         
                         SecureField("Password", text: $viewModel.password)
                             .padding()
-                            .foregroundColor(.green)
+                            .foregroundColor(.white)
                             .background(Color.cyan.opacity(0.4))
                             .cornerRadius(20)
                         
@@ -39,7 +39,7 @@ struct SignInEmailView: View {
                             viewModel.signIn()
                            
                         } label: {
-                            NavigationLink("log in", destination: ContentView())
+                            NavigationLink("Log in", destination: ContentView())
                             //Text("Sign In")
                             
                             .font(.headline)
@@ -48,17 +48,13 @@ struct SignInEmailView: View {
                             .frame(maxWidth: .infinity)
                             .background(Color.cyan)
                             .cornerRadius(20)
-                            
-                            
-                    }
-                        //Spacer()
-                        
+
+                        }
+            
                     }
                     .padding()
-                }
             }
-            
-        
+        }
     }
 }
 

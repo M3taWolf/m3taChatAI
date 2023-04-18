@@ -37,7 +37,7 @@ struct NoItemsView: View {
                             .font(.headline)
                             .frame(height: 55)
                             .frame(maxWidth: .infinity)
-                            .background(animate ? Color.mint  : Color.cyan)
+                            .background(Color.cyan)
                             .cornerRadius(30)
                         
                     })
@@ -50,20 +50,18 @@ struct NoItemsView: View {
                         y: animate ? 50 : 30)
                     .scaleEffect(animate ? 1.1 : 1.0)
                     .offset(y: animate ? -7 : 0)
-                    
-                    
                 }
-                
-                
                 .multilineTextAlignment(.center)
                 .padding(40)
                 .onAppear(perform: addAnimation)
-                
-                
             }
             .navigationTitle("")
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            
+            .navigationBarItems(
+                leading: EditButton()
+                    .foregroundColor(.cyan),
+                trailing:
+                    NavigationLink("Add", destination: AddView()))
         }
     }
         
@@ -74,8 +72,8 @@ struct NoItemsView: View {
             withAnimation(
             Animation
                 .easeInOut(duration: 2.0)
-                .repeatForever()
-            ) {
+                .repeatForever())
+             {
                 animate.toggle()
             }
         }
@@ -88,7 +86,7 @@ struct NoItemsView_Previews: PreviewProvider {
             NoItemsView()
                 .navigationTitle("Title")
         }
-        
+        .environmentObject(ListViewModel())
     }
 }
 
