@@ -1,4 +1,4 @@
-An App, where you can communicate with the chatGPT AI and an implemented To Do list for organizing and  to navigate through your day. Not finished.
+An App, where you can communicate with the chatGPT AI and an implemented To Do list for organizing and  to navigate through your day.
 
 Note: To use it, you need to implement your own Auth Key in the ViewModel from openAI: https://openai.com/api/
 
